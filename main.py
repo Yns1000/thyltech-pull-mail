@@ -53,7 +53,7 @@ async def check_email():
         except Exception as e:
             print(f"Erreur lors de la vérification des emails : {e}")
 
-        await asyncio.sleep(60)  # Vérifie toutes les 60 secondes
+        await asyncio.sleep(60*30)  # Vérifie toutes les 30 secondes
 
 
 @client.event
