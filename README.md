@@ -9,7 +9,7 @@ Script Python permettant de **centraliser automatiquement les e-mails clients** 
 - 📥 Connexion à une boîte mail via IMAP
 - 🔎 Récupération des e-mails non lus
 - 💬 Envoi automatique des e-mails dans un canal Discord
-- ⏱️ Exécution automatique toutes les 60 secondes
+- ⏱️ Exécution automatique toutes les 30 minutes
 - 🔐 Sécurisation via un fichier `.env`
 
 ---
