@@ -1,69 +1,77 @@
-📩 ThylTech Mail Puller - Intégration Discord
+# 📩 ThylTech Mail Puller — Intégration Discord
 
-🔥 Description
+Script Python permettant de **centraliser automatiquement les e-mails clients** dans un **canal Discord**, afin d’offrir à l’équipe projet une **vision en temps réel** des messages entrants.
 
-ThylTech Mail Puller est un script Python permettant de récupérer automatiquement les e-mails des clients et prospects de ThylTech et de les afficher directement dans le serveur Discord de l'équipe projet. Cela permet à toute l'équipe d'avoir une vision centralisée des nouveaux messages entrants en temps réel.
+---
 
-🚀 Fonctionnalités
+## ⚙️ Fonctionnalités
 
-Connexion à une boîte mail via IMAP
+- 📥 Connexion à une boîte mail via IMAP
+- 🔎 Récupération des e-mails non lus
+- 💬 Envoi automatique des e-mails dans un canal Discord
+- ⏱️ Exécution automatique toutes les 60 secondes
+- 🔐 Sécurisation via un fichier `.env`
 
-Récupération des e-mails non lus
+---
 
-Affichage des e-mails dans un canal Discord prédéfini
+## 📂 Structure attendue
 
-Exécution automatique toutes les 60 secondes
+Un fichier `.env` doit être placé à la racine du projet, contenant :
 
-Sécurisation des identifiants via un fichier .env
-
-🛠 Prérequis
-
-Avant d'exécuter le script, assurez-vous d'avoir :
-
-Python 3.x installé
-
-Un serveur Discord avec un bot configuré
-
-Un compte mail compatible IMAP
-
-Un fichier .env contenant les identifiants (voir ci-dessous)
-
-📦 Installation
-
-Clonez ce repo :
-
-git clone https://github.com/Yns1000/thyltech-pull-mail.git
-cd thyltech-pull-mail
-
-Installez les dépendances :
-
-pip install -r requirements.txt
-
-Créez un fichier .env à la racine du projet et ajoutez vos informations sensibles :
-
+```env
 DISCORD_TOKEN=Votre_Token_Discord
 DISCORD_CHANNEL_ID=ID_du_Canal_Discord
 IMAP_SERVER=imap.votremail.com
 EMAIL_ACCOUNT=votre@email.com
 EMAIL_PASSWORD=VotreMotDePasse
+```
 
-▶ Utilisation
+---
 
-Lancez le script en exécutant :
+## 🚨 Prérequis
 
+- Python 3.x installé
+- Un serveur Discord avec un bot configuré
+- Un compte mail compatible IMAP
+
+---
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/Yns1000/thyltech-pull-mail.git
+cd thyltech-pull-mail
+pip install -r requirements.txt
+```
+
+---
+
+## ▶️ Utilisation
+
+Lancez simplement le script avec :
+
+```bash
 python main.py
+```
 
-Le bot se connectera à votre serveur mail, récupérera les e-mails non lus et les enverra dans le canal Discord configuré.
+Le script se connectera à la boîte mail, analysera les messages non lus, puis les affichera dans le canal Discord spécifié.
 
-❗ Remarque
+---
 
-Pensez à ne jamais partager votre fichier .env ou vos identifiants sur GitHub !
-Ajoutez-le à votre fichier .gitignore pour éviter qu'il ne soit suivi par Git.
+## ⚠️ Bonnes pratiques
 
-💡 Améliorations futures
+- Ne partagez **jamais** votre fichier `.env` publiquement.
+- Ajoutez-le à votre `.gitignore` pour éviter les fuites de données sensibles.
 
-Ajout d'un filtre pour n'afficher que certains types d'e-mails
+---
 
-📝 Licence
+## 💡 Améliorations futures
 
-Projet interne ThylTech - Tous droits réservés.
+- Ajout de filtres pour ignorer certains types d’e-mails (ex : notifications automatiques)
+- Ajout de logs ou d’une interface de supervision
+
+---
+
+## 📄 Licence
+
+Projet interne **ThylTech** — Tous droits réservés.
